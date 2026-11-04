@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fffaf5;
+    color: #34251f;
+}
+
+/* Navigation */
+header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #a33b28;
+    font-size: 24px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #34251f;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    color: #c65b35;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    padding: 50px 10%;
+    background:
+        linear-gradient(rgba(30, 15, 8, 0.55), rgba(30, 15, 8, 0.55)),
+        url("https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: #c65b35;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-btn:hover {
+    background: #a33b28;
+}
+
+/* Recipe Section */
+.recipes-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 65px 25px;
+    text-align: center;
+}
+
+.recipes-section h2,
+.add-section h2 {
+    font-size: 32px;
+    color: #a33b28;
+    margin-bottom: 12px;
+}
+
+.section-description {
+    color: #77665e;
+    margin-bottom: 30px;
+}
+
+.recipe-controls {
+    margin-bottom: 30px;
+}
+
+.recipe-controls select {
+    padding: 11px 16px;
+    border: 1px solid #d8c6b9;
+    border-radius: 6px;
+    background: white;
+    font-size: 15px;
+}
+
+/* Recipe Cards */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    text-align: left;
+}
+
+.recipe-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.25s;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.recipe-info {
+    padding: 20px;
+}
+
+.recipe-info h3 {
+    color: #a33b28;
+    margin-bottom: 8px;
+}
+
+.recipe-info p {
+    color: #77665e;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.category {
+    display: inline-block;
+    background: #fff0e7;
+    color: #a33b28;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.card-actions button {
+    border: none;
+    padding: 9px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.edit-btn {
+    background: #c68a35;
+}
+
+.delete-btn {
+    background: #b94336;
+}
+
+/* Add Recipe Form */
+.add-section {
+    background: #f8eee6;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#recipeForm {
+    max-width: 600px;
+    margin: 25px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#recipeForm input,
+#recipeForm textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d8c6b9;
+    border-radius: 6px;
+    font-size: 15px;
+    background: white;
+}
+
+#recipeForm textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+#recipeForm button {
+    padding: 14px;
+    background: #a33b28;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#recipeForm button:hover {
+    background: #7e2b1d;
+}
+
+/* Footer */
+footer {
+    background: #34251f;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 650px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        gap: 18px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 40px 7%;
+    }
+}

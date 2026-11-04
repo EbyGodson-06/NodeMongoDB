@@ -1,0 +1,69 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Recipe World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Delicious Recipe World</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#recipes">Recipes</a></li>
+                <li><a href="#add-recipe">Add Recipe</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Discover the Joy of Cooking</h1>
+            <p>Explore delicious recipes and bring happiness to your kitchen.</p>
+            <a href="#recipes" class="hero-btn">Explore Recipes</a>
+        </div>
+    </section>
+
+    <main>
+        <section class="recipes-section" id="recipes">
+            <h2>Our Delicious Recipes</h2>
+            <p class="section-description">Find your favourite dishes and try something new!</p>
+
+            <div class="recipe-controls">
+                <select id="categoryFilter">
+                    <option value="All">All Categories</option>
+                    <option value="Breakfast">Breakfast</option>
+                    <option value="Lunch">Lunch</option>
+                    <option value="Dinner">Dinner</option>
+                    <option value="Dessert">Dessert</option>
+                </select>
+            </div>
+
+            <div id="recipeList" class="recipe-grid">
+                <p>Loading recipes...</p>
+            </div>
+        </section>
+
+        <section class="add-section" id="add-recipe">
+            <h2>Add Your Own Recipe</h2>
+            <form id="recipeForm">
+                <input type="text" id="recipeName" placeholder="Recipe Name" required>
+                <input type="text" id="recipeCategory" placeholder="Category (Breakfast, Lunch...)" required>
+                <textarea id="recipeDescription" placeholder="Recipe Description" required></textarea>
+                <input type="text" id="recipeImage" placeholder="Image URL (optional)">
+                <button type="submit" id="submitBtn">Add Recipe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Delicious Recipe World | Made with Love</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
